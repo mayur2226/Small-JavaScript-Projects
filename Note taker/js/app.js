@@ -93,36 +93,3 @@ function dark(){
    
 }
 
-class Employee{
-    constructor(givenName,givenExperience,givenDept){
-        this.name=givenName;
-        this.experience=givenExperience;
-        this.dept = givenDept;
-    }
-    slogan(){
-        return `I am ${this.name} and this company is best`;
-    }
-    joiningYear(){
-        return 2020 - this.experience;
-    }
-    static add(a,b){
-        return a + b;
-    }
-}
-
-let mayuresh = new Employee("mayur",5,"IT");
-console.log(mayuresh);
-console.log(mayuresh.slogan());
-console.log(mayuresh.joiningYear());
-
-class Programer extends Employee{
-    constructor(givenName,givenExperience,givenDept,language){
-        super(givenName,givenExperience,givenDept);
-        this.lang = language;
-    }
-}
-
-let raj = new Programer("raj",6,"IT","python");
-console.log(raj);
-console.log(raj.joiningYear());
-console.log(raj.slogan());
